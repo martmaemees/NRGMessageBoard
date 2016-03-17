@@ -8,12 +8,11 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Requests;
 use App\Http\Requests\MessageRequest;
 use App\Http\Controllers\Controller;
-//, ['only' => ['create', 'controlPanel', 'delete', 'edit', 'update', 'store']]
 class MainController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth', ['only' => ['create', 'controlPanel', 'delete', 'edit', 'update', 'store']]);
     }
 
     public function index()

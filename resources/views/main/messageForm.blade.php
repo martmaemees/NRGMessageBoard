@@ -28,13 +28,6 @@
 </div>
 
 <div class="form-group">
-    {!! Form::label('imgUrl', 'Image URL: ', array('class' => 'col-sm-2 control-label')) !!}
-    <div class="col-sm-10">
-        {!! Form::text('imgUrl', null, array('class' => 'form-control')) !!}
-    </div>
-</div>
-
-<div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
         {!! Form::submit($button, array('class'=>'btn btn-default')) !!}
     </div>

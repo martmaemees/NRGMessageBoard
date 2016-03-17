@@ -19,7 +19,6 @@ class CreateMessagesTable extends Migration
             $table->dateTime('startdate');
             $table->dateTime('enddate');
             $table->integer('user_id');
-//            $table->string('imgUrl');
             $table->timestamps();
         });
     }
