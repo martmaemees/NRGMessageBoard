@@ -160,7 +160,6 @@ return [
          * Added Service Providers
          */
         Collective\Html\HtmlServiceProvider::class,
-        Vinelab\Editor\EditorServiceProvider::class
     ],
 
     /*

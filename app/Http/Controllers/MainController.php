@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Message;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests;
@@ -85,6 +86,7 @@ class MainController extends Controller
     {
         $title = 'Loo uus teade';
         $message = new \App\Message;
+//        $message->startdate = Carbon::today();
         $button = 'Loo teade';
 
         return view('main.create', compact('message', 'title', 'button'));
@@ -92,9 +94,6 @@ class MainController extends Controller
 
     public function store(MessageRequest $request)
     {
-//        $input = Input::get(Editor::input());
-//        dd(Editor::content($input));
-
         Auth::user()->messages()->save(new Message($request->all()));
 
         return redirect('/');

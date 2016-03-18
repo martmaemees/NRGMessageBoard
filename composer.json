@@ -10,7 +10,6 @@
         "laravelcollective/html": "5.2.*",
         "nesbot/carbon": "^1.21",
         "guzzlehttp/guzzle": "^6.1",
-        "vinelab/laravel-editor": "^1.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

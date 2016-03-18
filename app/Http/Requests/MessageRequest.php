@@ -25,8 +25,9 @@ class MessageRequest extends Request
     {
         return [
             'title' => 'required',
-//            'body'  => 'required',
-//            'enddate' => 'required'
+            'body'  => 'required',
+            'enddate' => 'required',
+            'startdate' => 'required'
         ];
     }
 }
