@@ -86,10 +86,10 @@ class MainController extends Controller
     {
         $title = 'Loo uus teade';
         $message = new \App\Message;
-//        $message->startdate = Carbon::today();
-        $button = 'Loo teade';
+        $message->startdate = Carbon::today();
+        $message->enddate = Carbon::tomorrow();
 
-        return view('main.create', compact('message', 'title', 'button'));
+        return view('main.create', compact('message', 'title'));
     }
 
     public function store(MessageRequest $request)
