@@ -18,9 +18,6 @@
     </style>
 </head>
 <body>
-{{--<div class="row">--}}
-    {{--@include('layouts.header')--}}
-{{--</div>--}}
     <div class="container">
         @include('layouts.header')
 
@@ -29,6 +26,7 @@
 
     @include('layouts.footer')
 
+    @yield('scripts')
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/all.js"></script>
 </body>
