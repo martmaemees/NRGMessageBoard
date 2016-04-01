@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="row">
-    <div class="col-sm-9">
+    <div class="col-sm-12">
         <div class="panel panel-primary">
             <div class="panel-heading">
                 <h3 class="panel-title">Sinu teated</h3>
@@ -17,8 +17,8 @@
                     </tr>
                     @foreach($messages as $message)
                         <tr>
-                            <td><a href="{{ url('/', $message->id) }}">{{ $message->title }}</a></td>
-                            <td>{{ $message->body }}</td>
+                            <td><a href="{{ url('/', $message->id) }}">{{ str_limit($message->title, $limit = 60, $end='...') }}</a></td>
+                            <td>{{ str_limit($message->body, $limit = 50, $end='...') }}</td>
                             <td>{{ $message->startdate->toFormattedDateString() }} - {{ $message->enddate->toFormattedDateString() }}</td>
                             <td>
                                 <a class="btn btn-default" href="/cp/edit/{{ $message->id }}">Edit</a>
