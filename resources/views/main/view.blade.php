@@ -1,8 +1,10 @@
 @extends('layouts.frame')
 
 @section('content')
-
-    <h2>{{ $message->title }}</h2>
-    <p>{{ $message->body }}</p>
+    <div class="col-sm-9">
+        <h2>{{ $message->title }}</h2>
+        <hr>
+        {!! $message->body !!}
+    </div>
 
 @endsection

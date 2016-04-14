@@ -160,6 +160,7 @@ return [
          * Added Service Providers
          */
         Collective\Html\HtmlServiceProvider::class,
+        Unisharp\Ckeditor\ServiceProvider::class,
     ],
 
     /*

@@ -8,7 +8,7 @@
 <div class="form-group">
     {!! Form::label('body', 'Body; ', array('class' => 'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
-        {!! Form::textarea('body', null, array('class' => 'form-control')) !!}
+        {!! Form::textarea('body', null, array('class' => 'form-control', 'id' => 'body-ckeditor')) !!}
 {{--        {!! Editor::view('body', null, array('class' => 'form-control')) !!}--}}
     </div>
 </div>
@@ -34,7 +34,7 @@
 </div>
 
 @if(count($errors) > 0)
-    <div class="alert-danger alert">
+    <div class="alert-danger alert" role="alert">
         <ul>
             @foreach($errors as $error)
                 <li>{{ $error }}</li>
@@ -42,3 +42,8 @@
         </ul>
     </div>
 @endif
+
+<script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace( 'body-ckeditor' );
+</script>

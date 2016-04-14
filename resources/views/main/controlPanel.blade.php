@@ -18,7 +18,7 @@
                     @foreach($messages as $message)
                         <tr>
                             <td><a href="{{ url('/', $message->id) }}">{{ str_limit($message->title, $limit = 60, $end='...') }}</a></td>
-                            <td>{{ str_limit($message->body, $limit = 50, $end='...') }}</td>
+                            <td>{!! str_limit($message->body, $limit = 50, $end='...') !!}</td>
                             <td>{{ $message->startdate->toFormattedDateString() }} - {{ $message->enddate->toFormattedDateString() }}</td>
                             <td>
                                 <a class="btn btn-default" href="/cp/edit/{{ $message->id }}">Edit</a>
