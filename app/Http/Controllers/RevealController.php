@@ -9,8 +9,23 @@ use App\Http\Controllers\Controller;
 
 class RevealController extends Controller
 {
+    private function getMessages()
+    {
+        $messages = \App\Message::active()->get()->all();
+//        dd($messages);
+        return $messages;
+    }
+
     public function index()
     {
-        return view('reveal.index');
+        $data = $this->getMessages();
+        return view('reveal.index', compact('data'));
     }
+
+    private function menu()
+    {
+        return;
+    }
+
+
 }

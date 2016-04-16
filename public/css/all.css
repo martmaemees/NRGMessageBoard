@@ -6772,4 +6772,20 @@ button.close {
     margin-top: 22px;
     margin-bottom: 0px;
 }
+
+/*Set the background logo to topright or topleft*/
+html.img-topright div.slide-background.present {
+    background-position: top right;
+}
+
+html.img-topleft div.slide-background.present {
+    background-position: top left;
+}
+
+#revealLogo {
+    background-image: url(/img/nrg-logo-transp.png);
+    background-repeat: no-repeat;
+    backgorund-position: top left;
+    background-size: 100px;
+}
 /*# sourceMappingURL=all.css.map */
