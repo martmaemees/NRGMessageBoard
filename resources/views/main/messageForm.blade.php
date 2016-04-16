@@ -6,7 +6,7 @@
 </div>
 
 <div class="form-group">
-    {!! Form::label('body', 'Body; ', array('class' => 'col-sm-2 control-label')) !!}
+    {!! Form::label('body', 'Body: ', array('class' => 'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
         {!! Form::textarea('body', null, array('class' => 'form-control', 'id' => 'body-ckeditor')) !!}
 {{--        {!! Editor::view('body', null, array('class' => 'form-control')) !!}--}}
@@ -33,17 +33,25 @@
     </div>
 </div>
 
-@if(count($errors) > 0)
-    <div class="alert-danger alert" role="alert">
-        <ul>
-            @foreach($errors as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
-
 <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
 <script>
-    CKEDITOR.replace( 'body-ckeditor' );
+    CKEDITOR.replace( 'body-ckeditor', {
+        toolbarGroups: [
+            { "name": 'clipboard', groups: [ 'clipboard', 'undo' ] },
+            { "name": 'editing', groups: [ 'find', 'selection', 'spellchecker', 'editing' ] },
+            { "name": 'links', groups: [ 'links' ] },
+            { "name": 'insert', groups: [ 'insert' ] },
+            { "name": 'forms', groups: [ 'forms' ] },
+            { "name": 'tools', groups: [ 'tools' ] },
+            { "name": 'document', groups: [ 'mode', 'document', 'doctools' ] },
+            { "name": 'others', groups: [ 'others' ] },
+            { "name": 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },
+            { "name": 'paragraph', groups: [ 'list', 'indent', 'blocks', 'align', 'bidi', 'paragraph' ] },
+            { "name": 'styles', groups: [ 'styles' ] },
+            { "name": 'colors', groups: [ 'colors' ] },
+            { "name": 'about', groups: [ 'about' ] }
+        ],
+        // Remove the redundant buttons from toolbar groups defined above.
+        removeButtons: 'Subscript,Superscript,Anchor,HorizontalRule,SpecialChar,Maximize,Source,About,Styles,Format,Blockquote,Indent,Outdent'
+    });
 </script>

@@ -8,4 +8,14 @@
 
 {!! Form::close() !!}
 
+@if(count($errors) > 0)
+    {{--<div class="alert-danger alert" role="alert">--}}
+        <ul>
+            @foreach($errors as $error)
+                <li>{!! $error !!}</li>
+            @endforeach
+        </ul>
+    {{--</div>--}}
+@endif
+
 @endsection
