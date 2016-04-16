@@ -33,6 +33,8 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/cp', 'MainController@controlPanel');
     Route::get('/cp/delete/{id}', 'MainController@delete');
     Route::auth();
+    Route::get('/reveal', 'RevealController@index');
+
     Route::get('/{message}', 'MainController@view');
 });
 
