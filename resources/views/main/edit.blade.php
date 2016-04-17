@@ -8,4 +8,6 @@
 
     {!! Form::close() !!}
 
+    @include('errors.list')
+
 @endsection

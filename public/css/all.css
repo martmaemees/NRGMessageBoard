@@ -6788,4 +6788,8 @@ html.img-topleft div.slide-background.present {
     backgorund-position: top left;
     background-size: 100px;
 }
+
+.error-list {
+    list-style-type: none;
+}
 /*# sourceMappingURL=all.css.map */
