@@ -24,8 +24,8 @@ class MessageRequest extends Request
     public function rules()
     {
         return [
-            'title' => 'required',
-            'body'  => 'required',
+            'title' => 'required|max:60',
+            'body'  => 'required|max:600',
             'enddate' => 'required',
             'startdate' => 'required'
         ];

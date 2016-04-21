@@ -5,7 +5,7 @@
         </div>
         <div class="col-sm-8">
             <a href="/" class="btn btn-default btn-header" >Avaleht</a>
-            <a href="#" class="btn btn-default btn-header" >Placeholder</a>
+            <a href="/reveal" class="btn btn-default btn-header" >Presentation</a>
             @if(Auth::check())
                 <a href="/cp" class="btn btn-default btn-header">Control Panel</a>
                 <a href="/create" class="btn btn-default btn-header">Uus teade</a>

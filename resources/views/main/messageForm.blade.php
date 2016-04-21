@@ -52,6 +52,6 @@
             { "name": 'about', groups: [ 'about' ] }
         ],
         // Remove the redundant buttons from toolbar groups defined above.
-        removeButtons: 'Subscript,Superscript,Anchor,HorizontalRule,SpecialChar,Maximize,Source,About,Styles,Format,Blockquote,Indent,Outdent'
+        removeButtons: 'Subscript,Superscript,Anchor,HorizontalRule,SpecialChar,Maximize,About,Styles,Format,Blockquote,Indent,Outdent'
     });
 </script>

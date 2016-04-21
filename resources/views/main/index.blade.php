@@ -14,7 +14,7 @@
                 @foreach($messages as $message)
 
                     <a href="{{ url('/', $message->id) }}"><h4 style="margin:5px 0;"><strong>{{ $message->title }}</strong></h4></a>
-                    <p style="padding-left:15px;">{{ $message->body }}</p>
+                    <p style="padding-left:15px;">{!! $message->body !!}</p>
 
                 @endforeach
 

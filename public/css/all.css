@@ -6792,4 +6792,8 @@ html.img-topleft div.slide-background.present {
 .error-list {
     list-style-type: none;
 }
+
+.reveal p {
+    font-size: 0.9em;
+}
 /*# sourceMappingURL=all.css.map */
