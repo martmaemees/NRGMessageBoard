@@ -27,5 +27,11 @@ class RevealController extends Controller
         return;
     }
 
+    public function latestDate()
+    {
+        $date = \App\Message::orderBy('updated_at', 'desc')->first();
+        return $date['updated_at'];
+    }
+
 
 }

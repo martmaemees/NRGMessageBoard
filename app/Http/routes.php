@@ -34,7 +34,8 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/cp/delete/{id}', 'MainController@delete');
     Route::auth();
     Route::get('/reveal', 'RevealController@index');
+    Route::get('/latestDate', 'RevealController@latestDate');
 
-    Route::get('/{message}', 'MainController@view');
+    Route::get('/view/{message}', 'MainController@view');
 });
 
