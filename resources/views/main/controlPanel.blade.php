@@ -10,10 +10,10 @@
             <div class="panel-body">
                 <table class="table table-striped">
                     <tr>
-                        <th>Title</th>
+                        <th>Pealkiri</th>
                         {{--<th>Body</th>--}}
-                        <th>Date</th>
-                        <th>Actions</th>
+                        <th>Kuupäev</th>
+                        <th>{{--Actions--}}</th>
                     </tr>
                     @foreach($messages as $message)
                         <tr>
@@ -22,8 +22,8 @@
                             {{--<td>{!! str_limit($message->body, $limit = 50, $end='...') !!}</td>--}}
                             <td>{{ $message->startdate->toFormattedDateString() }} - {{ $message->enddate->toFormattedDateString() }}</td>
                             <td>
-                                <a class="btn btn-default" href="/cp/edit/{{ $message->id }}">Edit</a>
-                                <a class="btn btn-default" Onclick="return confirm('Are you sure?');" href="/cp/delete/{{ $message->id }}">Delete</a>
+                                <a class="btn btn-default" href="/cp/edit/{{ $message->id }}">Muuda</a>
+                                <a class="btn btn-default" Onclick="return confirm('Are you sure?');" href="/cp/delete/{{ $message->id }}">Kustuta</a>
                             </td>
                         </tr>
                     @endforeach
