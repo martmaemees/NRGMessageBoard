@@ -27,4 +27,12 @@
             viewDistance: 3
         });
     </script>
+
+    <script>
+        window.setInterval(function() {
+                    var version = jQuery.get('/latestDate');
+                    var jsonObj = JSON.parse(version);
+                    console.log(jsonObj);
+                }, 10000);
+    </script>
 @endsection
