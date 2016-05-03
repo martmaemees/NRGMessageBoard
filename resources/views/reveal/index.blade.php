@@ -24,7 +24,8 @@
             touch: false,
             loop: true,
             autoSlide: 20000,
-            viewDistance: 3
+            viewDistance: 3,
+            autoSlideStoppable: false
         });
     </script>
 
