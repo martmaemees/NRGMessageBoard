@@ -3,7 +3,7 @@
         <div class="col-sm-2">
             <h1><a href="">NRG</a></h1>
         </div>
-        <div class="col-sm-8">
+        <div class="col-sm-7">
             <a href="/" class="btn btn-default btn-header" >Avaleht</a>
             <a href="/reveal" class="btn btn-default btn-header" >Presentatsioon</a>
             @if(Auth::check())
@@ -11,7 +11,7 @@
                 <a href="/create" class="btn btn-default btn-header">Uus teade</a>
             @endif
         </div>
-        <div class="col-sm-2 text-right">
+        <div class="col-sm-3 text-right">
             @if(Auth::check())
                 <a href="/logout" class="btn btn-info btn-header">Logi välja</a>
             @else
