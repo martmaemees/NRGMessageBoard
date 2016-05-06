@@ -52,10 +52,7 @@
             function compareDate(response)
             {
                 if(oldDate != response) {
-//                    console.log('Refreshing!');
                     location.reload(true);
-                }else {
-//                    console.log('No updates!');
                 }
             }
 
@@ -68,7 +65,6 @@
             loadDoc(setDate);
             // Timeout, to give time for first date to be set, to prevent comparing to undefined oldDate.
             setTimeout(function() {
-//                console.log(oldDate);
                 window.setInterval(function() {
                     loadDoc(compareDate)
                 }, 10000);
