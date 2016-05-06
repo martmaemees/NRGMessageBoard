@@ -6,9 +6,6 @@
 ```
 #!shell
 
-
-git clone https://PyroVx@bitbucket.org/PyroVx/messageboard.git
-
 # Install the composer dependencies.
 composer install
 
