@@ -12,8 +12,10 @@ git clone https://PyroVx@bitbucket.org/PyroVx/messageboard.git
 # Install the composer dependencies.
 composer install
 
+# Create the .env file
 cp .env.example .env
 
+#Generate a random application key.
 php artisan key:generate
 
 # Set the database details
