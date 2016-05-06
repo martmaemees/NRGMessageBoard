@@ -23,6 +23,9 @@ DB_HOST=[database location]
 DB_DATABASE=[database name]
 DB_USERNAME=[database username]
 DB_PASSWORD=[database password]
+
+# Migrate the database
+php artisan migrate
 ```
 
 
