@@ -2,7 +2,11 @@
 
 ## Installation
 
-```{r, engine='bash', count_lines}
+
+```
+#!shell
+
+
 git clone https://PyroVx@bitbucket.org/PyroVx/messageboard.git
 
 # Install the composer dependencies.
@@ -17,9 +21,8 @@ DB_HOST=[database location]
 DB_DATABASE=[database name]
 DB_USERNAME=[database username]
 DB_PASSWORD=[database password]
-
-
 ```
+
 
 ### License
 
