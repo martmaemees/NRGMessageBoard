@@ -1,4 +1,4 @@
-## Message board
+### Message board
 
 ## Installation
 
@@ -26,9 +26,12 @@ DB_PASSWORD=[database password]
 
 # Migrate the database
 php artisan migrate
+
+# Set debugging off in .env file
+APP_DEBUG=false
 ```
 
 
-### License
+## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
