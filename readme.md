@@ -18,7 +18,7 @@ cp .env.example .env
 #Generate a random application key.
 php artisan key:generate
 
-# Set the database details
+# Set the database details in the .env file.
 DB_HOST=[database location]
 DB_DATABASE=[database name]
 DB_USERNAME=[database username]
