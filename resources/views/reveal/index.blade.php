@@ -3,13 +3,19 @@
 @section('content')
     <div class="reveal" id="revealLogo">
         <div class="slides">
-            @foreach($data as $slide)
+            @if($data)
+                @foreach($data as $slide)
+                    <section>
+                        <h3>{{ $slide->title }}</h3>
+                        <p>{!! $slide->body !!}</p>
+                    </section>
+                @endforeach
+            @else
                 <section>
-                    <h3>{{ $slide->title }}</h3>
-                    <p>{!! $slide->body !!}</p>
+                    <h2>Tere tulemast</h2>
+                    <h2>Nõo Reaalgümnaasiumi!</h2>
                 </section>
-            @endforeach
-
+            @endif
         </div>
     </div>
 
