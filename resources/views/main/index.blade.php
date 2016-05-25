@@ -2,8 +2,6 @@
 
 @section('content')
 
-
-
 <div class="row">
     <div class="col-sm-9">
         <div class="panel panel-primary">
@@ -13,7 +11,7 @@
             <div class="panel-body">
                 @foreach($messages as $message)
 
-                    <a href="{{ url('/view/', $message->id) }}"><h4 style="margin:5px 0;"><strong>{{ $message->title }}</strong></h4></a>
+                    <a href="{{ url('view', $message->id) }}"><h4 style="margin:5px 0;"><strong>{{ $message->title }}</strong></h4></a>
                     <p style="padding-left:15px;">{!! $message->body !!}</p>
 
                 @endforeach

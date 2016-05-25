@@ -1,7 +1,11 @@
 <!doctype html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
+
+    <base href={{ url('/.') }}>
+            
     <!--<meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
     <title>@if(isset($title)){{ $title }}@else Document @endif</title>
 
@@ -10,7 +14,7 @@
     <!-- Fonts -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/css/all.css">
+    <link rel="stylesheet" href="css/all.css">
     <style>
         body {
             font-family: 'Lato';
