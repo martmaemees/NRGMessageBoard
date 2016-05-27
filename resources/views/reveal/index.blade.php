@@ -46,7 +46,12 @@
                 xhttp.onreadystatechange = function() {
                     if (xhttp.readyState == 4 && xhttp.status == 200) {
                         var responseArray = JSON.parse(xhttp.responseText);
-                        cFunc(responseArray.date.date);
+                        response = [responseArray.date, responseArray.activeCount];
+                        if(response[0] == null) {
+                            cFunc([{date: 'x'}, response[1]]);
+                        }else {
+                            cFunc(response)
+                        }
                     }
                 }
 
@@ -55,9 +60,9 @@
             }
 
             // Compares requested date with the one set on loading the page.
-            function compareDate(response)
+            function compareState(response)
             {
-                if(oldDate != response) {
+                if(oldState[0].date != response[0].date || oldState[1] != response[1]) {
                     location.reload(true);
                 }
             }
@@ -65,16 +70,16 @@
             // Sets the date on loading the page.
             function setDate(response)
             {
-                oldDate = response;
+                oldState = response;
             }
 
             loadDoc(setDate);
-            // Timeout, to give time for first date to be set, to prevent comparing to undefined oldDate.
+            // Timeout, to give time for first date to be set, to prevent comparing to undefined oldState.
             setTimeout(function() {
                 window.setInterval(function() {
-                    loadDoc(compareDate)
-                }, 10000);
-            }, 10000);
+                    loadDoc(compareState)
+                }, 5000);
+            }, 5000);
         });
 
     </script>

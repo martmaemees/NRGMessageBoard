@@ -30,7 +30,11 @@ class RevealController extends Controller
     public function latestDate()
     {
         $date = \App\Message::orderBy('updated_at', 'desc')->first();
-        $jsonDate = json_encode(['date' => $date['updated_at']]);
+
+        $activeCount = \App\Message::active()->count();
+
+        $jsonDate = json_encode(['date' => $date['updated_at'], 'activeCount' => $activeCount]);
+
         return $jsonDate;
     }
 

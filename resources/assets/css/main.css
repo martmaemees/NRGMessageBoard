@@ -22,7 +22,7 @@ html.img-topleft div.slide-background.present {
 }
 
 #revealLogo {
-    background-image: url('../img/nrg-logo-transp.png');
+    background-image: url('./img/nrg-logo-transp.png');
     background-repeat: no-repeat;
     backgorund-position: top left;
     background-size: 100px;

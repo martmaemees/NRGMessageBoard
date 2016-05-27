@@ -19,6 +19,15 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+//
+//$factory->define(App\User::class, function (Faker\Generator $faker) {
+//    return [
+//        'name' => 'admin',
+//        'email' => 'admin@admin.com',
+//        'password' => bcrypt('123456'),
+//        'remember_token' => str_random(10),
+//    ];
+//});
 
 $factory->define(App\Message::class, function(Faker\Generator $faker) {
     return [
@@ -27,15 +36,6 @@ $factory->define(App\Message::class, function(Faker\Generator $faker) {
         'startdate' => $faker->dateTimeBetween($startDate = '-30 days', $interval = '- 5 days'),
         'enddate' => $faker->dateTimeBetween($startDate = '+ 5 days', $enddate = '+ 30 days'),
         'user_id' => $faker->numberBetween(1, 10)
-//        'imgUrl' => $faker->imageUrl()
     ];
 });
 
-//$factory->define(App\User::class, function (Faker\Generator $faker) {
-//    return [
-//        'name' => 'admin',
-//        'email' => 'admin@email.com',
-//        'password' => bcrypt('admin'),
-//        'remember_token' => str_random(10),
-//    ];
-//});

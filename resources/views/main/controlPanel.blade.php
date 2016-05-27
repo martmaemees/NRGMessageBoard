@@ -23,7 +23,7 @@
                             <td>{{ $message->startdate->toFormattedDateString() }} - {{ $message->enddate->toFormattedDateString() }}</td>
                             <td>
                                 <a class="btn btn-default" href="cp/edit/{{ $message->id }}">Muuda</a>
-                                <a class="btn btn-default" Onclick="return confirm('Are you sure?');" href="cp/delete/{{ $message->id }}">Kustuta</a>
+                                <a class="btn btn-default" Onclick="return confirm('Olete kindel, et soovite seda teadet kustutada?');" href="cp/delete/{{ $message->id }}">Kustuta</a>
                             </td>
                         </tr>
                     @endforeach
