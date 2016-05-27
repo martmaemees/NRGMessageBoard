@@ -38,7 +38,7 @@
     <script>
         $(document).ready(function() {
 
-            var url = '/latestDate';
+            var url = 'latestDate';
             var xhttp = new XMLHttpRequest();
 
             // Function to get JSON data from URL and send it into a function passed in as a parameter.
