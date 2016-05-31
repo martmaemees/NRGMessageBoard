@@ -15,6 +15,7 @@ class Message extends Model
         'title', 'body', 'startdate', 'enddate', 'user_id'
     ];
 
+    # Query scope to get all the active messages from the database.
     public function scopeActive($query)
     {
         return $query->where('enddate', '>=', Carbon::now())

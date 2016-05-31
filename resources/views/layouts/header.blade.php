@@ -12,12 +12,15 @@
             @endif
         </div>
         <div class="col-sm-3 text-right">
+
+            {{-- If the user is logged in, shows the logout button, otherwise login and register buttons --}}
             @if(Auth::check())
                 <a href="logout" class="btn btn-info btn-header">Logi välja</a>
             @else
                 <a href="login" class="btn btn-info btn-header">Logi sisse</a>
                 <a href="register" class="btn btn-info btn-header">Registreeri</a>
             @endif
+
         </div>
     </div>
 </div>
