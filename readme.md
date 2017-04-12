@@ -1,4 +1,4 @@
-### Message board
+# Message board
 
 ## Installation
 
